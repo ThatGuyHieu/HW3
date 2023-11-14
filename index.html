@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Multiplication Table</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div id="content">
+        <header>
+            Multiplication Table
+        </header>
+        <!-- Form for input -->
+        <form>
+            <div class="form">
+                <h4>Table Ranges</h4>
+                <!-- Input for minimum row value -->
+                <div class="form-group">
+                    <label for="rowmin">Minimum Row Value:</label>
+                    <input type="number" onkeydown="return event.keyCode !== 69" id="rowmin" placeholder="Enter an integer">
+                </div>
+                <!-- Input for maximum row value -->
+                <div class="form-group">
+                    <label for="rowmax">Maximum Row Value:</label>
+                    <input type="number" onkeydown="return event.keyCode !== 69" id="rowmax" placeholder="Enter an integer">
+                </div>
+                <!-- Input for minimum column value -->
+                <div class="form-group">
+                    <label for="colmin">Minimum Column Value:</label>
+                    <input type="number" onkeydown="return event.keyCode !== 69" id="colmin" placeholder="Enter an integer">
+                </div>
+                <!-- Input for maximum column value -->
+                <div class="form-group">
+                    <label for="colmax">Maximum Column Value:</label>
+                    <input type="number" onkeydown="return event.keyCode !== 69" id="colmax" placeholder="Enter an integer">
+                </div>
+                <!-- Submit and Clear buttons -->
+                <button type="button" class="btn btn-primary mt-2 ml-3" id="submit-btn">Submit</button>
+                <button type="button" class="btn btn-primary mt-2" id="clear-btn" onclick="clr()">Clear</button>
+            </div>
+        </form>
+        <div id="table-content"></div>
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
